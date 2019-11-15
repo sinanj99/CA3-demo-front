@@ -10,13 +10,15 @@ function LogIn(props) {
     setUser({ ...user });
   };
   return (
-    <div className="wrapper">
-      <form onSubmit={login} onChange={onChange}>
-        <h1>Login</h1>
-        <input placeholder="User Name" id="username" /><br />
-        <input placeholder="Password" id="password" /><br />
-        <button>Login</button>
-      </form>
+    <div className="main">
+      <div className="wrap">
+        <form onSubmit={login} onChange={onChange}>
+          <h1>Login</h1>
+          <input placeholder="User Name" id="username" /><br />
+          <input placeholder="Password" id="password" /><br />
+          <button>Login</button>
+        </form>
+      </div>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-const URL = "https://sinanjasar.dk/ca3-dem-back";
+const URL = "https://sinanjasar.dk/ca3-demo";
 function handleHttpErrors(res) {
   if (!res.ok) {
     return Promise.reject({ status: res.status, fullError: res.json() });
@@ -8,20 +8,6 @@ function handleHttpErrors(res) {
 
 class ApiFacade {
 
-  /*
-    Rolerne bliver hentet i login funktionen.
-    Derefter tjekker vi, i fetchData funktioner, hvilken role en bruger har.
-    Også fetcher vi fra det endpoint som kun kan tilgås med den givne role.
-
-    Har en fornemmelse at det ikke er den bedste løsning.
-    Prøv at se om du kan optimere den.
-
-    Den er dog ikke helt færdig, da der ikke tages højde for om en bruger har flere roller.
-    Faden kalder, vi tjales.
-    
-
-    
-  */
   roles = [0];
 
   setToken = token => {

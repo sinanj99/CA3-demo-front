@@ -27,9 +27,11 @@ function App() {
             {!loggedIn ? (
               <LogIn login={login} />
             ) : (
-                <div className="wrapper">
-                  <LoggedIn />
-                  <button onClick={logout}>Logout</button>
+                <div className="main">
+                  <div className="wrap">
+                    <LoggedIn />
+                    <button onClick={logout}>Logout</button>
+                  </div>
                 </div>
               )}
           </Route>

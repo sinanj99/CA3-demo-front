@@ -9,28 +9,30 @@ function Posts(props) {
     }, [facade]);
 
     return (
-        <div className="wrapper">
-            <table>
-                <h1>Data</h1>
-                <tbody>
-                    <tr>
-                        <td><b>ID</b></td>
-                        <td><b>Title</b></td>
-                        <td><b>Text</b></td>
-                    </tr>
-                    {
-                        posts.map((d, i) => {
-                            return (
-                                <tr key={i}>
-                                    <td>{d.id}</td>
-                                    <td>{d.title}</td>
-                                    <td>{d.body}</td>
-                                </tr>
-                            )
-                        })
-                    }
-                </tbody>
-            </table>
+        <div className="main">
+            <div className="wrap">
+                <table>
+                    <h1>Data</h1>
+                    <tbody>
+                        <tr>
+                            <td><b>ID</b></td>
+                            <td><b>Title</b></td>
+                            <td><b>Text</b></td>
+                        </tr>
+                        {
+                            posts.map((d, i) => {
+                                return (
+                                    <tr key={i}>
+                                        <td>{d.id}</td>
+                                        <td>{d.title}</td>
+                                        <td>{d.body}</td>
+                                    </tr>
+                                )
+                            })
+                        }
+                    </tbody>
+                </table>
+            </div>
         </div>
     );
 }
